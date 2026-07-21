@@ -17,6 +17,14 @@ body {
     --red: #ff3838;
 }
 
+@font-face {
+    font-family: "SG";
+    src: url("assets/ScienceGothic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     background: linear-gradient(
         -45deg,
@@ -41,6 +49,18 @@ body {
     z-index: -1;
 }
 
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .star {
     position: absolute;
     background-color: white;
@@ -58,14 +78,127 @@ body {
     }
 }
 
-@keyframes moveGradient {
+.profilecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    flex-direction: column;
+}
+
+.spacer {
+    height: 360px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    position: relative;
+    width: 40vw;
+}
+
+.profile > div:not(.spacer) {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    width: 30vw;
+    padding-left: 600px;
+    transition: opacity 0.5s ease;
+}
+
+.profile:hover > div {
+    opacity: 1;
+}
+
+.profile > div:not(.spacer) > p {
+    font-family: "SG";
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: white;
+    user-select: none;
+}
+
+.profile > div:not(.spacer) > h1 {
+    font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    font-size: 2rem;
+    color: white;
+    user-select: none;
+    font-weight: 900;
+}
+
+.profile > img {
+    border-radius: 50%;
+    object-fit: cover;
+    animation: glow 2s ease-in-out infinite alternate;
+    user-select: none;
+    position: absolute;
+    z-index: 2;
+    transition: transform 0.5s ease;
+    pointer-events: none;
+}
+
+.profile:hover > img {
+    transform: translateX(-300px);
+}
+
+.profilecontainer > p {
+    font-family: "SG";
+    margin-top: 25px;
+    box-sizing: border-box;
+    font-size: 2rem;
+    color: white;
+    user-select: none;
+}
+
+@keyframes glow {
     0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
+        filter: drop-shadow(0px 1px 2px var(--dark-orange));
     }
     100% {
-        background-position: 0% 50%;
+        filter: drop-shadow(0px 15px 20px var(--dark-orange));
     }
+}
+
+.maincontainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.iconcontainer > img {
+    width: 75px;
+    fill: white;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition:
+        border-color 0.1s ease-in,
+        filter 0.1s ease-in,
+        transform 0.1s ease-in;
+    user-select: none;
+}
+
+.iconcontainer > img:hover {
+    border-color: var(--dark-orange);
+    filter: drop-shadow(0px 4px 5px var(--dark-orange));
+    cursor: pointer;
+}
+
+.iconcontainer > img:active {
+    transform: scale(0.95);
 }
