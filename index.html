@@ -2,6 +2,7 @@
     <head>
         <title>abcde456 Personal Site</title>
         <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="carousel.css" />
     </head>
 
     <body>
@@ -23,11 +24,136 @@
                 </div>
                 <p>abcde456</p>
                 <div class="iconcontainer">
-                    <img src="assets/images/github.svg" />
-                    <img src="assets/images/hackclub.svg" />
+                    <img
+                        src="assets/images/github.svg"
+                        onclick="goToPage('https://github.com/abcde456')"
+                    />
+                    <img
+                        src="assets/images/hackclub.svg"
+                        onclick="
+                            goToPage('https://stardance.hackclub.com/@Zee/')
+                        "
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="continuecontainer">
+            <div class="carouselcontainer">
+                <p>Tech Stack:</p>
+                <div class="carousel">
+                    <div class="group">
+                        <div class="card">
+                            <img src="assets/images/react.webp" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/typescript.webp" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/java.svg" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/python.webp" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/web.png" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/flutter.webp" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/csharp.png" />
+                        </div>
+                    </div>
+                    <div aria-hidden class="group">
+                        <div class="card">
+                            <img src="assets/images/react.webp" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/typescript.webp" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/java.svg" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/python.webp" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/web.png" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/flutter.webp" />
+                        </div>
+                        <div class="card">
+                            <img src="assets/images/csharp.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carouselcontainer" style="padding-top: 100px">
+                <p>Previous Projects:</p>
+            </div>
+            <div class="projectslist">
+                <div onclick="goToPage('https://github.com/Bot-bay/Botbay')">
+                    <img src="assets/images/botbay.png" />
+                    <p>Botbay</p>
+                    <p>
+                        Botbay is an FTC/FRC inventory management tool that I
+                        worked on earlier this year as one of my main projects.
+                        It can keep track of a team's entire inventory, and sync
+                        across the devices of all members.
+                    </p>
+                </div>
+                <div
+                    onclick="
+                        goToPage(
+                            'https://github.com/16423-Storm/Scoutmaster-React',
+                        )
+                    "
+                >
+                    <img src="assets/images/scoutmasterreact.png" />
+                    <p>Scoutmaster React</p>
+                    <p>
+                        Scoutmaster React is a project I am working on now to
+                        rebuild the original Scoutmaster from the ground up.
+                        Because Scoutmaster Original was one of my first
+                        projects, it had a lot of flaws, and being built on raw
+                        HTML with no framework made it quite hard to maintain as
+                        well. I wanted to fix that, so now I am currently
+                        working on Scoutmaster React.
+                    </p>
+                </div>
+                <div
+                    onclick="
+                        goToPage('https://github.com/16423-Storm/Scoutmaster')
+                    "
+                >
+                    <img src="assets/images/scoutmaster.png" />
+                    <p>Scoutmaster Original</p>
+                    <p>
+                        Scoutmaster was one of my biggest coding projects ever,
+                        an FTC scouting tool that synced across devices of all
+                        scouts, working on phones, tablets, and desktop. It was
+                        my first introduction to any sort of actual back-end
+                        coding.
+                    </p>
+                </div>
+                <div
+                    onclick="goToPage('https://github.com/abcde456/Puzzle-Tab')"
+                >
+                    <img src="assets/images/puzzletab.png" />
+                    <p>Puzzle Tab</p>
+                    <p>
+                        Puzzle Tab is a project is a project I made for the Hack
+                        Club Stardance mission Give Your Website a Pulse. It is
+                        a new tab page that uses DuckDuckGo API to have search
+                        recommendations right now. Later on I will be adding
+                        actual things to it such as quick links, and puzzles
+                        (hence the name, "PuzzleTab").
+                    </p>
                 </div>
             </div>
         </div>
         <script src="assets/scripts/stars.js" defer></script>
+        <script src="assets/scripts/redirect.js" defer></script>
     </body>
 </html>

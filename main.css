@@ -166,11 +166,12 @@ body {
 }
 
 .maincontainer {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .iconcontainer {
@@ -201,4 +202,72 @@ body {
 
 .iconcontainer > img:active {
     transform: scale(0.95);
+}
+
+.continuecontainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectslist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row dense;
+    grid-gap: 30px;
+    width: 95%;
+    color: white;
+    padding-bottom: 100px;
+}
+
+.projectslist > div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    overflow: hidden;
+    transition:
+        filter,
+        0.1s ease;
+}
+
+.projectslist > div > img {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+.projectslist > div:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+.projectslist > div p:first-of-type {
+    font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    padding: 20px 0px;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.projectslist > div p:nth-of-type(2) {
+    padding: 10px 20px;
+    padding-bottom: 20px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 1rem;
 }

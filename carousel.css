@@ -1,0 +1,66 @@
+.carouselcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.carousel {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: 20px 0px;
+    &:hover .group {
+        animation-play-state: paused;
+    }
+}
+
+.card {
+    color: white;
+    padding: 20px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card img {
+    max-height: 95%;
+    max-width: 95%;
+}
+
+.group {
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+    will-change: transform;
+    animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.carouselcontainer > p {
+    font-size: 2rem;
+    font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: white;
+}
